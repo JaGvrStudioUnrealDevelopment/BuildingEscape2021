@@ -22,10 +22,11 @@ void UWordPosition::BeginPlay()
 	
 	
 	FString Name=GetOwner()->GetName();
-	/* FString Log=TEXT("Hello");
-	FString* PtrLog=&Log;
-	PtrLog->Len();*/
-	UE_LOG(LogTemp,Warning,TEXT("%s"), *Name); 
+	//UE_LOG(LogTemp,Warning,TEXT("%s"), *Name); 
+
+	FString ObjPosition=GetOwner()->GetActorLocation().ToString();
+	UE_LOG(LogTemp, Error, TEXT("The Object %s is at position\n %s"),*Name,*ObjPosition);
+	
 }
 
 
